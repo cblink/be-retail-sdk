@@ -12,197 +12,301 @@ use Cblink\BeRetail\Client;
 class Sku extends Client
 {
     /**
-     * 创建商品营销活动
+     * 商品上传
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.create
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.create
      */
-    public function activityCreate(array $data)
+    public function skuCreate(array $data)
     {
-        return $this->post('activity.create', $data);
+        return $this->post('sku.create', $data);
     }
 
     /**
-     * 添加活动商品
+     * 商品修改
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.sku.add
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.update
      */
-    public function activitySkuAdd(array $data)
+    public function skuUpdate(array $data)
     {
-        return $this->post('activity.sku.add', $data);
+        return $this->post('sku.update', $data);
     }
 
     /**
-     * 删除活动商品
+     * 商品列表
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.sku.delete
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.list
      */
-    public function activitySkuDelete(array $data)
+    public function skuList(array $data)
     {
-        return $this->post('activity.sku.delete', $data);
+        return $this->post('sku.list', $data);
     }
 
     /**
-     * 活动下线
+     * 商品上线
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.disable
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.online
      */
-    public function activityDisable(array $data)
+    public function skuOnline(array $data)
     {
-        return $this->post('activity.disable', $data);
+        return $this->post('sku.online', $data);
     }
 
     /**
-     * 查看活动
+     * 商品下线
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.get
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.offline
      */
-    public function activityGet(array $data)
+    public function skuOffline(array $data)
     {
-        return $this->post('activity.get', $data);
+        return $this->post('sku.offline', $data);
     }
 
     /**
-     * 查看活动商品列表
+     * 批量修改商品库存
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.sku.list
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.stock.update.batch
      */
-    public function activitySkuList(array $data)
+    public function skuStockUpdateBatch(array $data)
     {
-        return $this->post('activity.sku.list', $data);
+        return $this->post('sku.stock.update.batch', $data);
     }
 
     /**
-     * 批量添加商品活动
+     * 新增自定义分类
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.sku.add.batch
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.shop.category.create
      */
-    public function activitySkuAddBatch(array $data)
+    public function skuShopCategoryCreate(array $data)
     {
-        return $this->post('activity.sku.add.batch', $data);
+        return $this->post('sku.shop.category.create', $data);
     }
 
     /**
-     * 批量删除商品活动
+     * 修改自定义分类
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.sku.delete.batch
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.shop.category.update
      */
-    public function activitySkuDeleteBatch(array $data)
+    public function skuShopCategoryUpdate(array $data)
     {
-        return $this->post('activity.sku.delete.batch', $data);
+        return $this->post('sku.shop.category.update', $data);
     }
 
     /**
-     * 更新活动商品
+     * 删除自定义分类
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.sku.update
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.shop.category.delete
      */
-    public function activitySkuUpdate(array $data)
+    public function skuShopCategoryDelete(array $data)
     {
-        return $this->post('activity.sku.update', $data);
+        return $this->post('sku.shop.category.delete', $data);
     }
 
     /**
-     * 批量更新活动商品
+     * 绑定自定义分类
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.sku.update.batch
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.shop.category.map
      */
-    public function activitySkuUpdateBatch(array $data)
+    public function skuShopCategoryMap(array $data)
     {
-        return $this->post('activity.sku.update.batch', $data);
+        return $this->post('sku.shop.category.map', $data);
     }
 
     /**
-     * 更新活动
+     * 批量修改商品价格
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.update
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.price.update.batch
      */
-    public function activityUpdate(array $data)
+    public function skuPriceUpdateBatch(array $data)
     {
-        return $this->post('activity.update', $data);
+        return $this->post('sku.price.update.batch', $data);
     }
 
     /**
-     * N选1添加活动商品
+     * 获取品牌列表
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.ns1.sku.add
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.brand.list
      */
-    public function activityNs1SkuAdd(array $data)
+    public function skuBrandList(array $data)
     {
-        return $this->post('activity.ns1.sku.add', $data);
+        return $this->post('sku.brand.list', $data);
     }
 
     /**
-     * N选1批量添加活动商品
+     * 获取分类列表
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.ns1.sku.add.batch
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.category.list
      */
-    public function activityNs1SkuAddBatch(array $data)
+    public function skuCategoryList(array $data)
     {
-        return $this->post('activity.ns1.sku.add.batch', $data);
+        return $this->post('sku.category.list', $data);
     }
 
     /**
-     * N选1删除活动商品
+     * 商品批量删除
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.ns1.sku.delete
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.delete
      */
-    public function activityNs1SkuDelete(array $data)
+    public function skuDelete(array $data)
     {
-        return $this->post('activity.ns1.sku.delete', $data);
+        return $this->post('sku.delete', $data);
     }
 
     /**
-     * N选1批量删除活动商品
+     * 绑定商品与自定义商品ID
      *
      * @param array $data
      * @return mixed
      *
-     * @see https://open-be.ele.me/dev/api/apidoc#/detail/activity.ns1.sku.delete.batch
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.shop.customsku.map
      */
-    public function activityNs1SkuDeleteBatch(array $data)
+    public function skuShopCustomskuMap(array $data)
     {
-        return $this->post('activity.ns1.sku.delete.batch', $data);
+        return $this->post('sku.shop.customsku.map', $data);
+    }
+
+    /**
+     * 处方药推方
+     *
+     * @param array $data
+     * @return mixed
+     *
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/prescription.push
+     */
+    public function prescriptionPush(array $data)
+    {
+        return $this->post('prescription.push', $data);
+    }
+
+    /**
+     * 单个商品下线
+     *
+     * @param array $data
+     * @return mixed
+     *
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.offline.one
+     */
+    public function skuOfflineOne(array $data)
+    {
+        return $this->post('sku.offline.one', $data);
+    }
+
+    /**
+     * 单个商品上线
+     *
+     * @param array $data
+     * @return mixed
+     *
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.online.one
+     */
+    public function skuOnlineOne(array $data)
+    {
+        return $this->post('sku.online.one', $data);
+    }
+
+    /**
+     * 修改单个商品库存
+     *
+     * @param array $data
+     * @return mixed
+     *
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.stock.update.one
+     */
+    public function skuStockUpdateOne(array $data)
+    {
+        return $this->post('sku.stock.update.one', $data);
+    }
+
+    /**
+     * 修改单个商品价格
+     *
+     * @param array $data
+     * @return mixed
+     *
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.price.update.one
+     */
+    public function skuPriceUpdateOne(array $data)
+    {
+        return $this->post('sku.price.update.one', $data);
+    }
+
+    /**
+     * 获取商户自定义分类下商品列表
+     *
+     * @param array $data
+     * @return mixed
+     *
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.shop.customsku.list
+     */
+    public function skuShopCustomskuList(array $data)
+    {
+        return $this->post('sku.shop.customsku.list', $data);
+    }
+
+    /**
+     * 上传富文本描述信息
+     *
+     * @param array $data
+     * @return mixed
+     *
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.uploadrtf
+     */
+    public function skuUploadrtf(array $data)
+    {
+        return $this->post('sku.uploadrtf', $data);
+    }
+
+    /**
+     * 根据upc码查询是否平台药品
+     *
+     * @param array $data
+     * @return mixed
+     *
+     * @see https://open-be.ele.me/dev/api/apidoc#/detail/sku.stdupc.exist
+     */
+    public function skuStdupcExist(array $data)
+    {
+        return $this->post('sku.stdupc.exist', $data);
     }
 }
