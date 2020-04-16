@@ -1,0 +1,36 @@
+{
+    "name": "cblink/be-takeaway",
+    "description": "Package description here.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "牟勇",
+            "email": "my242551325@gmail.com"
+        }
+    ],
+    "require": {
+        "mouyong/foundation-sdk": "^2.0",
+        "ramsey/uuid": "^4.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cblink\\BeRetail\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cblink\\BeRetail\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cblink\\BeRetail\\LaravelServiceProvider"
+            ]
+        }
+    }
+}
