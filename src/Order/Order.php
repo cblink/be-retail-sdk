@@ -17,6 +17,18 @@ class Order extends Client
      *
      * @return mixed
      *
+     * https://open-be.ele.me/dev/api/apidoc#/detail/order.create
+     */
+    public function rspOrderCreate($source_order_id)
+    {
+        return $this->beRsp('order.create', compact('source_order_id'));
+    }
+
+    /**
+     * 确认订单
+     *
+     * @return mixed
+     *
      * https://open-be.ele.me/dev/api/apidoc#/detail/order.confirm
      */
     public function orderConfirm($order_id)
