@@ -29,11 +29,11 @@ class Client extends AbstractClient
      */
     public function beRsp(string $cmd, $data = null, $errno = 0, $error = 'success')
     {
-        $data['body'] = compact('errno', 'error') + array_filter(compact('data'));
-        $data['cmd'] = 'rsp.'.$cmd;
-        $data['encode'] = false;
+        $rsp['body'] = compact('errno', 'error') + array_filter(compact('data'));
+        $rsp['cmd'] = 'rsp.'.$cmd;
+        $rsp['encode'] = false;
 
-        return $this->sign($data);
+        return $this->sign($rsp);
     }
 
     public function sign(array $data = []): array
