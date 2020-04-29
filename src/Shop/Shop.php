@@ -253,12 +253,11 @@ class Shop extends Client
     /**
      * 商户状态推送（下行）
      *
-     * @param array $data
      * @return mixed
      *
      * @see https://open-be.ele.me/dev/api/apidoc#/detail/shop.msg.push
      */
-    public function rspShopMsgPush(array $data)
+    public function rspShopMsgPush()
     {
         return $this->beRsp('shop.msg.push');
     }
