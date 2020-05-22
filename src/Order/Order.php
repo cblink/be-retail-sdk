@@ -383,14 +383,13 @@ class Order extends Client
     /**
      * 用户申请订单取消/退款
      *
-     * @param array $data
      * @return mixed
      *
      * @see https://open-be.ele.me/dev/api/apidoc#/detail/order.user.cancel
      */
-    public function orderUserCancel(array $data)
+    public function rspOrderUserCancel()
     {
-        return $this->post('order.user.cancel', $data);
+        return $this->beRsp('order.user.cancel');
     }
 
     /**
