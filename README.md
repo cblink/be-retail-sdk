@@ -6,7 +6,7 @@
 ## Installing
 
 ```shell
-$ composer require cblink/be-takeaway -vvv
+$ composer require cblink/be-retail-sdk -vvv
 ```
 
 ## Usage
